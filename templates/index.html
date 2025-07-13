@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drug Dosage Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>💊 Drug Dosage Recommender</h1>
+    <img src="{{ url_for('static', filename='pill.png') }}" alt="Pill Bottle" width="100" style="margin-bottom: 20px;">
+
+    <form method="POST">
+      <label for="age">👶 Age</label>
+      <input type="number" name="age" id="age" placeholder="Enter age" required />
+
+      <label for="weight">⚖️ Weight (kg)</label>
+      <input type="number" name="weight" id="weight" placeholder="Enter weight" required />
+
+      <label for="condition">🩺 Condition</label>
+      <select name="condition" id="condition">
+        <option value="1">Hypertension</option>
+        <option value="2">Diabetes</option>
+        <option value="3">Anxiety</option>
+        <option value="4">Fever</option>
+        <option value="5">Other</option>
+      </select>
+
+      <button type="submit">🚀 Recommend Dosage</button>
+    </form>
+  </div>
+</body>
+</html>
